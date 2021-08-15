@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<head>
-    <title>Rock Paper Scissors</title>
-</head>
-
-<body>
-    <div id="buttons">
-        <input type="button" value="rock" id="rock"></input>
-        <input type="button" value="paper" id="paper"></input>
-        <input type="button" value="scissors" id="scissors"></input>
-    </div>
-        <script src = "logic.js" defer></script>
-</body>
+ <head>
+     <title>Rock Paper Scissors</title>
+     <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+     <div id="mainContainer">
+        <div id="buttons">
+            <input type="image" onclick="chooseRock()" value="rock" src="images/rock.svg" id="rock"></input>
+            <input type="image" onclick="choosePaper()" value="paper" src="images/paper.svg" id="paper"></input>
+            <input type="image" onclick="chooseScissors()" value="scissors" src="images/scissors.svg" id="scissors"></input>
+        </div>
+     </div>
+     <div id="compContainer">
+        <div id="wrapper"></div>
+        <div id="btnReset">
+            <button onclick="resetStyles()" id="resetBtn">Next Round</button>
+        </div>
+        <div id="computerChoice"></div>
+        <div id="result"></div>
+     </div>
+     <script src="logic.js" defer></script>
+ </body>
